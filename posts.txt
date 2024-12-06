@@ -1,27 +1,15 @@
-Titel: Titel
-Untertitel: Untertitel
+Titel: Mein erster Post
+Untertitel: Ein Beispiel
 Name: Samuel Krauss
 Datum: 18.11.2024
 Uhrzeit: 18:00
-Inhalt123
+Content: beispiel.jpg
+Dies ist der Inhalt meines ersten Posts.
 
-Titel: Titel
-Untertitel: Untertitel
+Titel: Mein zweiter Post
+Untertitel: Ein weiteres Beispiel
 Name: Samuel Krauss
-Datum: 18.11.2024
-Uhrzeit: 16:00
-Inhalt1234
-
-Titel: Titel
-Untertitel: Untertitel
-Name: Samuel Krauss
-Datum: 18.11.2024
-Uhrzeit: 16:00
-Inhalt12345
-
-Titel: Titel
-Untertitel: Untertitel
-Name: Samuel Krauss
-Datum: 18.11.2024
-Uhrzeit: 16:00
-Inhalt
+Datum: 19.11.2024
+Uhrzeit: 10:00
+Content: beispiel.mp4
+Dies ist der Inhalt meines zweiten Posts mit einem Video.
