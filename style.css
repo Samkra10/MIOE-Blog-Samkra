@@ -13,9 +13,9 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Sicherstellen, dass der Body die volle Höhe hat */
 }
 
 header {
@@ -40,106 +40,110 @@ header h1 {
 }
 
 #posts-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    flex-grow: 1;
+    max-width: 800px; /* Maximale Breite der Posts */
+    margin: 2rem auto; /* Zentrierung */
+    padding: 0 1rem; /* Innenabstand */
+    flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
 }
 
 .post {
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    margin-bottom: 1.5rem; /* Abstand zwischen den Posts */
+    border-radius: 8px; /* Abgerundete Ecken */
+    overflow: hidden; /* Verhindert Überlauf */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Schatteneffekt */
+    transition: all 0.3s ease; /* Übergangseffekte */
 }
 
 .post:hover {
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Schatten bei Hover */
 }
 
 .post-title {
     background-color: var(--secondary-color);
     color: white;
-    padding: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 1rem; /* Innenabstand */
+    cursor: pointer; /* Zeiger bei Hover */
+    transition: background-color 0.3s ease; /* Übergangseffekt für Hintergrundfarbe */
 }
 
 .post-title h3 {
-    margin: 0;
-    font-size: 1.2rem;
+    margin: 0; /* Kein Margin für den Titel */
+    font-size: 1.2rem; /* Schriftgröße für den Titel */
 }
 
 .post-subtitle {
-    font-size: 0.9rem;
-    margin: 0.3rem 0 0;
-    opacity: 0.8;
+    font-size: 0.9rem; /* Schriftgröße für den Untertitel */
+    margin: 0.3rem 0 0; /* Margin für Untertitel */
+    opacity: 0.8; /* Transparenz für Untertitel */
 }
 
 .post-title:hover {
-    background-color: var(--hover-color);
+    background-color: var(--hover-color); /* Hintergrundfarbe bei Hover */
 }
 
 .post-content {
-    background-color: white;
-    padding: 1.5rem;
-    display: none;
+    background-color: white; /* Hintergrundfarbe für den Inhalt */
+    padding: 1.5rem; /* Innenabstand */
+    display: none; /* Standardmäßig ausgeblendet */
 }
 
 .post-meta {
-    font-size: 0.9rem;
-    color: #7f8c8d;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
+    font-size: 0.9rem; /* Schriftgröße für Metadaten */
+    color: #7f8c8d; /* Farbe für Metadaten */
+    margin-bottom: 1rem; /* Abstand nach unten */
+    border-bottom: 1px solid #eee; /* Untere Linie für Metadaten */
+    padding-bottom: 0.5rem; /* Innenabstand nach unten */
 }
 
 .post-text {
-    line-height: 1.8;
+    line-height: 1.8; /* Zeilenhöhe für Textinhalt */
 }
 
 .post-media {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Abstand nach oben für Medieninhalte */
 }
 
 .post-media img,
 .post-media video,
 .post-media audio {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Maximale Breite der Medieninhalte */
+    height: auto; /* Automatische Höhe zur Wahrung des Verhältnisses */
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    color: white;
-    font-size: 0.9rem;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    text-align: center; /* Zentrierter Text im Footer */
+    padding: 1rem; /* Innenabstand im Footer */
+    background-color: var(--secondary-color); /* Hintergrundfarbe des Footers */
+    color: white; /* Textfarbe im Footer */
+    font-size: 0.9rem; /* Schriftgröße im Footer */
+    
+   position: fixed; 
+   left: 0;
+   bottom: 0;
+   width: 100%; 
+   box-shadow: -2px -2px 5px rgba(255,255,255,0.5), 
+               -2px -2px 10px rgba(255,255,255,0.3); 
+   z-index :100 ; 
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
+   header h1 {
+       font-size: 2rem; 
+   }
 
-    .subtitle {
-        font-size: 1rem;
-    }
+   .subtitle {
+       font-size :1rem ; 
+   }
 
-    .post-title h3 {
-        font-size: 1rem;
-    }
+   .post-title h3 { 
+       font-size :1rem ; 
+   }
 
-    .post-subtitle {
-        font-size: 0.8rem;
-    }
+   .post-subtitle { 
+       font-size :0.8rem ; 
+   }
 
-    .post-content {
-        padding: 1rem;
-    }
+   .post-content { 
+       padding :1rem ; 
+   }
 }
