@@ -13,6 +13,9 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -40,6 +43,7 @@ header h1 {
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
+    flex-grow: 1;
 }
 
 .post {
@@ -95,12 +99,27 @@ header h1 {
     line-height: 1.8;
 }
 
+.post-media {
+    margin-top: 1rem;
+}
+
+.post-media img,
+.post-media video,
+.post-media audio {
+    max-width: 100%;
+    height: auto;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--secondary-color);
     color: white;
     font-size: 0.9rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 @media (max-width: 600px) {
