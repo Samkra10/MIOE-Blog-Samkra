@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
