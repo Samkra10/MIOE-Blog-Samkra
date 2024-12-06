@@ -28,6 +28,8 @@ function parsePosts(data) {
             currentPost.date = line.substring(7);
         } else if (line.startsWith('Uhrzeit: ')) {
             currentPost.time = line.substring(9);
+        } else if (line.startsWith('Content: ')) {
+            currentPost.contentFile = line.substring(9);
         } else if (line.trim() !== '') {
             currentPost.content = (currentPost.content || '') + line + '\n';
         }
@@ -38,6 +40,29 @@ function parsePosts(data) {
     }
 
     return posts;
+}
+
+function createContentElement(contentFile) {
+    const extension = contentFile.split('.').pop().toLowerCase();
+    let element;
+
+    if (['jpg', 'jpeg', 'png', 'gif'].includes(extension)) {
+        element = document.createElement('img');
+        element.src = contentFile;
+        element.alt = 'Post image';
+    } else if (['mp4', 'webm', 'ogg'].includes(extension)) {
+        element = document.createElement('video');
+        element.src = contentFile;
+        element.controls = true;
+    } else if (['mp3', 'wav'].includes(extension)) {
+        element = document.createElement('audio');
+        element.src = contentFile;
+        element.controls = true;
+    } else {
+        return null;
+    }
+
+    return element;
 }
 
 function displayPosts(posts) {
@@ -57,6 +82,17 @@ function displayPosts(posts) {
                 <div class="post-text">${post.content}</div>
             </div>
         `;
+
+        if (post.contentFile) {
+            const contentElement = createContentElement(post.contentFile);
+            if (contentElement) {
+                const contentContainer = document.createElement('div');
+                contentContainer.className = 'post-media';
+                contentContainer.appendChild(contentElement);
+                postElement.querySelector('.post-content').appendChild(contentContainer);
+            }
+        }
+
         container.appendChild(postElement);
 
         const titleElement = postElement.querySelector('.post-title');
