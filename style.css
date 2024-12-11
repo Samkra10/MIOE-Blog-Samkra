@@ -106,7 +106,35 @@ footer {
     background-color: var(--secondary-color);
     color: white;
     font-size: 0.9rem;
-    
+}
+
+.post-media {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.post-media img,
+.post-media video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-media audio {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .post-media img,
+    .post-media video {
+        max-width: 80%;
+    }
+
+    .post-media audio {
+        width: 80%;
+    }
 }
 
 @media (max-width: 600px) {
